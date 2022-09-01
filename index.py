@@ -25,4 +25,32 @@ def consultProduct():
 
 def removeProduct():
              #ask for the product's code
-                         
+
+while True:
+    print("Welcom the stock managment system")
+    print("What would you like to do?")
+    print("1 - Register new product")
+    print("2 - consult product")
+    print("3 . remove product")
+    print("4 - Exit program")
+    #implement try to catch value errors
+    choice = int(input(""))
+    
+    if choice == 1:
+        registerProduct()
+        continue
+    elif choice == 2:
+        consultProduct()
+        continue
+    elif choice == 3:
+        removeProduct()
+        continue
+    elif choice == 4:
+        print("exeting...")
+        break    
+    else:
+        print("Error. invelid option")
+        continue        
+        
+    
+                             
