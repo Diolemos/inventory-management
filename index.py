@@ -1,3 +1,4 @@
+print("Welcom the Pedro Diogenes' stock managment system")
 products = [{"name":"water bottle",
  "manufacturer": "Tupperware","cost":70, "code": 1 },{"name":"Accustic guitar",
  "manufacturer": "Yamaha","cost":1850, "code": 2}, {"name":"Piano",
@@ -12,27 +13,32 @@ def registerProduct(code):
    
      manufacturer = input("What's the manufacturer?")#what's its manufacturer?
      cost = int(input("What's the product's cost?"))#what's its cost ? 
-     #save it to a dictionary 
-     newProduct = {"name":name,"manufacturer": manufacturer,"cost":cost,"code": code}  
-     codeCounter += 1
-     list.append(newProduct)
+     
+     newProduct = {"name":name,"manufacturer": manufacturer,"cost":cost,"code": code}  #creates the object to be apended to the list
+     codeCounter += 1 #adds a number to the counter, so next products can have different codes
+     list.append(newProduct) #save it to a dictionary 
 
 
 def consultProduct():
-    #sub menu : consult all products
-                #consult by code
-                #consult by manufacturer
-                #back to main manu
+    print("\n Would you like to:")#sub menu : consult all products
+    print("1- consult all products")
+    print("2- consult by code")#consult by code
+    print("3- consult by manufacturer")#consult by manufacturer
+    print("4- go back to main manu") #back to main manu
+    
+                
+                
+               
                 
 
 
 def removeProduct():
-             #ask for the product's code
+            print("placeholder") #ask for the product's code
 
 
 while True:
-    print("Welcom the Pedro Diogenes' stock managment system")
-    print("What would you like to do?")
+    
+    print("\nWhat would you like to do?")
     print("1 - Register new product")
     print("2 - consult product")
     print("3 . remove product")
@@ -56,7 +62,7 @@ while True:
         print("You chose- 4, exeting...")
         break    
     else:
-        print("Error. invelid option")
+        print("Error. invalid option")
         continue        
         
     
