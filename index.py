@@ -1,8 +1,8 @@
 products = [{"name":"water bottle",
- "manufacturer": "Tupperware", "code": 1 },{"name":"Accustic guitar",
- "manufacturer": "Yamaha", "code": 2}, {"name":"Piano",
- "manufacturer": "Yamaha", "code": 3 },{"name":"pendrive",
- "manufacturer": "sandisk", "code": 4 }]
+ "manufacturer": "Tupperware","cost":70, "code": 1 },{"name":"Accustic guitar",
+ "manufacturer": "Yamaha","cost":1850, "code": 2}, {"name":"Piano",
+ "manufacturer": "Yamaha","cost":2300, "code": 3 },{"name":"pendrive",
+ "manufacturer": "sandisk","cost":40, "code": 4 }]
 
 codeCounter = 5 #counter for tracking the product codes
 
@@ -11,9 +11,9 @@ def registerProduct(code):
      name = input("What's the product name?")  #whats the product's name?
    
      manufacturer = input("What's the manufacturer?")#what's its manufacturer?
-     #what's its cost ? 
+     cost = int(input("What's the product's cost?"))#what's its cost ? 
      #save it to a dictionary 
-     newProduct = {"name":name,"manufacturer": manufacturer,"code": code}  
+     newProduct = {"name":name,"manufacturer": manufacturer,"cost":cost,"code": code}  
      codeCounter += 1
      list.append(newProduct)
 
