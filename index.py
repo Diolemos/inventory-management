@@ -15,8 +15,8 @@ def registerProduct(code):
      cost = int(input("What's the product's cost?"))#what's its cost ? 
      
      newProduct = {"name":name,"manufacturer": manufacturer,"cost":cost,"code": code}  #creates the object to be apended to the list
-     codeCounter += 1 #adds a number to the counter, so next products can have different codes
-     list.append(newProduct) #save it to a dictionary 
+     myList = list()
+     myList.append(newProduct.copy()) #save it to a dictionary 
 
 
 def consultProduct():
@@ -25,9 +25,9 @@ def consultProduct():
     print("2- consult by code")#consult by code
     print("3- consult by manufacturer")#consult by manufacturer
     print("4- go back to main manu") #back to main manu
-    
+    option = int(input(""))
                 
-                
+            
                
                 
 
@@ -49,6 +49,7 @@ while True:
     if choice == 1:
         print("You chose 1- Register new product")
         registerProduct(codeCounter)
+        codeCounter += 1 #adds a number to the counter, so next products can have different codes
         continue
     elif choice == 2:
         print("You chose 2- Consult product")
