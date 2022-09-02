@@ -26,6 +26,17 @@ def consultProduct():
     print("3- consult by manufacturer")#consult by manufacturer
     print("4- go back to main manu") #back to main manu
     option = int(input(""))
+    if option == 1:
+        print("test 1")
+    elif option == 2:
+        print("test 2")
+    elif option == 3:
+        print("test 3")
+    elif option == 4:
+        return 
+    else:
+        print("Invalid option")
+        return            
                 
             
                
