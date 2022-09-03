@@ -62,7 +62,11 @@ def consultProduct():
 
 
 def removeProduct():
-            print("placeholder") #ask for the product's code
+        usersInput = int(input("What's the code of the product you would like to remove?")) #still need to implement try and execpt
+        for product in productList:
+            if product["code"] == usersInput:
+                print("Deleting Product: ", product["name"])
+                productList.remove(product) #I still need to implement a submition for the user's confirmation. Asking if he really wants to delete the selected file
 
 
 while True:
