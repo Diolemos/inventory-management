@@ -1,5 +1,5 @@
 print("Welcom the Pedro Diogenes' stock managment system")
-products = [{"name":"water bottle",
+productList = [{"name":"water bottle",
  "manufacturer": "Tupperware","cost":70, "code": 1 },{"name":"Accustic guitar",
  "manufacturer": "Yamaha","cost":1850, "code": 2}, {"name":"Piano",
  "manufacturer": "Yamaha","cost":2300, "code": 3 },{"name":"pendrive",
@@ -12,24 +12,33 @@ def registerProduct(code):
      name = input("What's the product name?")  #whats the product's name?
    
      manufacturer = input("What's the manufacturer?")#what's its manufacturer?
-     cost = int(input("What's the product's cost?"))#what's its cost ? 
+     cost = float(input("What's the product's cost?"))#what's its cost ? 
      
      newProduct = {"name":name,"manufacturer": manufacturer,"cost":cost,"code": code}  #creates the object to be apended to the list
-     myList = list()
-     myList.append(newProduct.copy()) #save it to a dictionary 
+     #myList = list()
+     productList.append(newProduct.copy()) #save it to a dictionary 
 
 
 def consultProduct():
     print("\n Would you like to:")#sub menu : consult all products
-    print("1- consult all products")
+    print("1- See all products")
     print("2- consult by code")#consult by code
     print("3- consult by manufacturer")#consult by manufacturer
     print("4- go back to main manu") #back to main manu
     option = int(input(""))
     if option == 1:
-        print("test 1")
+        for product in productList:
+            print("--------\n")
+            for key, value in product.items():
+                print("{} : {}".format(key,value))
     elif option == 2:
-        print("test 2")
+        usersCode = int(input("Please, insert the code:"))
+        for product in productList:
+            if product["code"] == usersCode:
+              for key, value in product.items():
+                  print("{}: {}".format(key,value))
+    
+        print("code not found")    #It's here so code Not found can be printed only once
     elif option == 3:
         print("test 3")
     elif option == 4:
