@@ -32,16 +32,25 @@ def consultProduct():
             for key, value in product.items():
                 print("{} : {}".format(key,value))
     elif option == 2:
-        usersCode = int(input("Please, insert the code:"))
+        usersInput = int(input("Please, insert the code:"))
         for product in productList:
-            if product["code"] == usersCode:
+            if product["code"] == usersInput:
               for key, value in product.items():
                   print("{}: {}".format(key,value))
     
-        print("code not found")    #It's here so code Not found can be printed only once
+        
     elif option == 3:
-        print("test 3")
+        usersInput = input("Please, type the manufacturer name:")
+        for product in productList:
+            if product["manufacturer"] == usersInput:
+              print("-----------------\n")
+              for key, value in product.items():
+                  print("{}: {}".format(key,value))
+            
+        
+            
     elif option == 4:
+        print("4: Back to main manu...")
         return 
     else:
         print("Invalid option")
